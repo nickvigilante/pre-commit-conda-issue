@@ -1,18 +1,6 @@
 repos:
-  - repo: local
+  - repo: /home/nickv/git/nickvigilante/pre-commit-conda-issue
+    rev: 7ce4fde04113d105d9482012cc93b7e8d8eb5725
     hooks:
       - id: ruff-md
-        name: Run Ruff formatter on Markdown files
-        files: 'index\.md$'
-        language: conda
-        entry: doccmd
-        args:
-          - "-l"
-          - "py"
-          - "-l"
-          - "python"
-          - "-c"
-          - "ruff format"
-          - "--myst-extension"
-          - ".qmd"
-          - "--no-pad-file"
+

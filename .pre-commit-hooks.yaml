@@ -1,0 +1,17 @@
+- id: ruff-md
+  name: Run Ruff formatter on Markdown files
+  files: '.+\.q?md' 
+  language: conda
+  entry: doccmd
+  args:
+    - "--no-pad-file"
+    - "-l"
+    - "py"
+    - "-l"
+    - "python"
+    - "-c"
+    - "--myst-extension"
+    - ".md"
+    - "--myst-extension"
+    - ".qmd"
+    - "ruff format"
