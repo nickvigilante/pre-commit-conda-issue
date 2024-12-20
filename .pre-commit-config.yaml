@@ -1,0 +1,18 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-md
+        name: Run Ruff formatter on Markdown files
+        files: 'index\.md$'
+        language: conda
+        entry: doccmd
+        args:
+          - "-l"
+          - "py"
+          - "-l"
+          - "python"
+          - "-c"
+          - "ruff format"
+          - "--myst-extension"
+          - ".qmd"
+          - "--no-pad-file"

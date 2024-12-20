@@ -1,0 +1,10 @@
+name: test-env
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - pre_commit
+  - python=3.13
+  - ruff
+  - pip:
+      - doccmd
